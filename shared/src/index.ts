@@ -4,10 +4,10 @@ const ProductSchema = z.object({
   id: z.number(),
   userId: z.string(),
   createdAt: z.date(),
-  sku: z.string(),
+  sku: z.string().min(1, "SKU is required"),
   quantity: z.number().int().nonnegative(),
   description: z.string().nullable(),
-  store: z.string(),
+  store: z.string().min(1, "Store is required"),
 });
 
 export const ProductInsertSchema = z.array(

@@ -1,0 +1,21 @@
+{
+  "version": "0.0.0",
+  "name": "zapp-tt",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently 'npm run dev --workspace backend' 'npm run dev --workspace frontend'"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "prettier": "^3.6.2",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "dependencies": {
+    "zod": "^3.25.67"
+  }
+}

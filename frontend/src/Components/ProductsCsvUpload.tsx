@@ -108,7 +108,7 @@ export const ProductCsvUpload = ({ addProducts }: WithProductAddProps) => {
           setParseError(rowErrors.join("\n"));
         } else {
           addProducts(productInput);
-          // TODO: probably don't need below state and log?
+          // TODO: could be improved with a Toast notification and input reset, leaving as is
           setParsedData(productInput);
           console.log(productInput);
         }

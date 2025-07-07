@@ -17,8 +17,17 @@ export const ProductInsertSchema = z.array(
   }),
 );
 
+export const ProductInputSchema = z.array(
+  ProductSchema.omit({
+    id: true,
+    userId: true,
+    createdAt: true,
+  }),
+);
+
 export type Product = z.infer<typeof ProductSchema>;
 export type ProductInsert = z.infer<typeof ProductInsertSchema>;
+export type ProductInput = z.infer<typeof ProductInputSchema>;
 
 export type Identified = { id: string };
 

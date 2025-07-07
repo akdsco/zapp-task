@@ -8,6 +8,7 @@
     "shared"
   ],
   "scripts": {
+    "setup-local": "npm i && cd backend && echo 'DATABASE_URL=\"file:./dev.db\"' > .env && npx prisma migrate dev --name init",
     "dev": "concurrently 'npm run dev --workspace backend' 'npm run dev --workspace frontend'"
   },
   "devDependencies": {

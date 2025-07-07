@@ -1,5 +1,8 @@
 ## Installation
-`npm run setup-local` (run from root of the repository)
+Tested on node v.22.17.0
+
+- `npm i`
+- `npm run setup-local` (run from root of the repository)
 ## Run the app
 `npm run dev`
 
@@ -21,3 +24,5 @@
   - There is a better way of dealing with it, run out of time to manage it better
 - DataGrid component resize is funky, letting that be (time constraint)
   - destroying and reinitializing the entire DataGrid on each resize, sad, but MUI charges for `useGridApiRef()` usage
+- not best UX when you already have a valid csv loaded in the input (and uploaded to DB) and then load unsupported file
+  - doubled up past success "notification" & "error" at the same time
